@@ -10,5 +10,6 @@ void	print_test(const char *test_name);
 int		test_putchar(void);
 int		test_putstr(void);
 int		test_strlen(void);
+int		test_strcmp(void);
 
 #endif

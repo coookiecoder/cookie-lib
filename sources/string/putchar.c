@@ -29,5 +29,5 @@ t_cookie_string_len	cookie_put_char_fd(const char c, const int fd)
 
 t_cookie_string_len	cookie_put_char_fd_nl(const char c, const int fd)
 {
-	return (write(fd, &c, 1) + write(1, "\n", 1));
+	return (write(fd, &c, 1) + write(fd, "\n", 1));
 }

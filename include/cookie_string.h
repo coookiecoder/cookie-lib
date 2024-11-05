@@ -23,7 +23,7 @@ t_cookie_string_len	cookie_strlen(const char *string);
 t_cookie_string_len	cookie_strlen_stop(const char *string, char stop);
 t_cookie_string_len	cookie_r_strlen_stop(const char *string, char stop);
 bool				cookie_strcmp(const char *ref, const char *cmp);
-bool				cookie_strcmp_n(const char *ref, const char *cmp, int n);
+bool				cookie_strcmp_n(const char *ref, const char *cmp, t_cookie_string_len n);
 t_cookie_string_len	cookie_put_str(const char *string);
 t_cookie_string_len	cookie_put_str_nl(const char *string);
 t_cookie_string_len	cookie_put_char(char c);

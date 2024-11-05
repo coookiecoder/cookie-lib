@@ -6,7 +6,7 @@
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 18:13:07 by abareux           #+#    #+#             */
-/*   Updated: 2024/10/18 19:01:58 by abareux          ###   ########.fr       */
+/*   Updated: 2024/11/05 13:44:31 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,6 @@ int	main(void)
 		return (1);
 	if (test_strlen())
 		return (1);
+    if (test_strcmp())
+      	return (1);
 }
