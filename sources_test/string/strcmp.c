@@ -14,15 +14,15 @@
 #include <cookie_string.h>
 #include <test.h>
 
-int test_strcmp(void)
+int	test_strcmp(void)
 {
-	print_test("strcmp : ");
+	print_test("str_cmp : ");
 	if (cookie_strcmp("strcmp", "strcmp") != COOKIE_STRCMP_EQUAL)
 		return (print_error());
 	if (cookie_strcmp("strcmp", "strcmo") != COOKIE_STRCMP_NOT_EQUAL)
 		return (print_error());
 	print_succes();
-	print_test("strcmp_n : ");
+	print_test("str_cmp_n : ");
 	if (cookie_strcmp_n("strcmp", "strcmp", 6) != COOKIE_STRCMP_EQUAL)
 		return (print_error());
 	if (cookie_strcmp_n("strcmp", "strcmo", 5) != COOKIE_STRCMP_EQUAL)

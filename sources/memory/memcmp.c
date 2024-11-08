@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   memcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 13:47:21 by abareux           #+#    #+#             */
-/*   Updated: 2024/11/08 14:29:56 by abareux          ###   ########.fr       */
+/*   Created: 2024/11/08 16:46:40 by abareux           #+#    #+#             */
+/*   Updated: 2024/11/08 16:46:40 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cookie_memory.h>
 
-void	*cookie_calloc(size_t size, size_t number_of_element)
+bool	cookie_mem_cmp(void *mem1, void *mem2, t_cookie_memory_size size)
 {
-	if (size * number_of_element / number_of_element != size)
-		return (NULL);
-	return (cookie_mem_set(malloc(size * number_of_element), size * number_of_element, 0));
+	t_cookie_memory_size	index;
+
+	index = 0;
+	while (index < size)
+	{
+		if (*(unsigned char *)(mem1 + index) != *(unsigned char *)(mem2 + index))
+			return (COOKIE_MEMCMP_NOT_EQUAL);
+		index++;
+	}
+	return (COOKIE_MEMCMP_EQUAL);
 }

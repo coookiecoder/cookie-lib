@@ -26,9 +26,9 @@ typedef unsigned long long int	t_cookie_string_len;
 
 typedef struct s_cookie_string
 {
-    char                *string;
-    t_cookie_string_len len;
-} t_cookie_string;
+	char				*string;
+	t_cookie_string_len	len;
+}	t_cookie_string;
 
 t_cookie_string_len	cookie_strlen(const char *string);
 t_cookie_string_len	cookie_strlen_stop(const char *string, char stop);
@@ -44,7 +44,7 @@ t_cookie_string_len	cookie_put_str_fd_nl(const char *string, int fd);
 t_cookie_string_len	cookie_put_char_fd(char c, int fd);
 t_cookie_string_len	cookie_put_char_fd_nl(char c, int fd);
 
-t_cookie_string     cookie_string_converter(const char *string);
-t_cookie_string     cookie_string_str_dup(const t_cookie_string string);
+t_cookie_string		cookie_string_converter(const char *string);
+t_cookie_string		cookie_string_str_dup(const t_cookie_string string);
 
 #endif

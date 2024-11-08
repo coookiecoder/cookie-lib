@@ -21,7 +21,7 @@ bool	check_sub_memory(void *mem, const t_cookie_memory_size size_addr_1, void *s
 	index = 0;
 	while (start < size_addr_1 && index < size_addr_2)
 	{
-		if (*((unsigned char *) mem + start++) != *((unsigned char *) sub_mem + index++))
+		if (*((unsigned char *)mem + start++) != *((unsigned char *)sub_mem + index++))
 			return (false);
 	}
 	if (index == size_addr_2)

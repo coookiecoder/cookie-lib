@@ -20,16 +20,17 @@ int	main(void)
 		return (1);
 	if (test_strlen())
 		return (1);
-    if (test_strcmp())
+	if (test_strcmp())
 		return (1);
 	if (test_strdup())
 		return (1);
 	if (test_converter())
 		return (1);
-
 	if (test_calloc())
 		return (1);
 	if (test_memchr())
+		return (1);
+	if (test_memcmp())
 		return (1);
 	return (0);
 }

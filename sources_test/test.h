@@ -6,7 +6,7 @@
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:25:51 by abareux           #+#    #+#             */
-/*   Updated: 2024/11/08 14:12:00 by abareux          ###   ########.fr       */
+/*   Updated: 2024/11/08 17:35:16 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@ int		test_putchar(void);
 int		test_putstr(void);
 int		test_strlen(void);
 int		test_strcmp(void);
-int     test_strdup(void);
+int		test_strdup(void);
 
 int		test_converter(void);
 
 int		test_calloc(void);
 int		test_memchr(void);
+int		test_memcmp(void);
 int		test_memset(void);
 
 #endif

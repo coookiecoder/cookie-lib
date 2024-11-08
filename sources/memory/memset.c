@@ -12,14 +12,14 @@
 
 #include <cookie_memory.h>
 
-void    *cookie_memset(void *data, size_t size, char byte)
+void	*cookie_mem_set(void *data, size_t size, char byte)
 {
-    size_t  index;
+	size_t	index;
 
-    if (data == NULL)
-        return (data);
-    index = 0;
-    while (index < size)
-        *((char *)data + index++) = byte;
-    return (data);
+	if (data == NULL)
+		return (data);
+	index = 0;
+	while (index < size)
+		*((char *)data + index++) = byte;
+	return (data);
 }
