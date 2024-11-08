@@ -1,33 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   memset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 18:13:07 by abareux           #+#    #+#             */
-/*   Updated: 2024/11/08 14:12:16 by abareux          ###   ########.fr       */
+/*   Created: 2024/11/08 14:17:38 by abareux           #+#    #+#             */
+/*   Updated: 2024/11/08 14:22:28 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include <cookie_memory.h>
 
-int	main(void)
-{
-	if (test_putchar())
-		return (1);
-	if (test_putstr())
-		return (1);
-	if (test_strlen())
-		return (1);
-    if (test_strcmp())
-		return (1);
-	if (test_strdup())
-		return (1);
-	if (test_converter())
-		return (1);
-
-	if (test_calloc())
-		return (1);
-	return (0);
-}
+int	test_memset(void);

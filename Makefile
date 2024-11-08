@@ -1,9 +1,11 @@
-files = string/putstr string/putchar string/strcmp string/strlen
+files = string/putstr string/putchar string/strcmp string/strlen \
+		cookie_string/strdup cookie_string/converter \
+		memory/calloc memory/memset
 
 sources = $(foreach buffer, $(files), sources/$(buffer).c)
 objects = $(foreach buffer, $(files), objects/$(buffer).o)
 
-files_test = main test string/putstr string/putchar string/strcmp string/strlen
+files_test = main test $(files)
 
 sources_test = $(foreach buffer, $(files_test), sources_test/$(buffer).c)
 objects_test = $(foreach buffer, $(files_test), objects_test/$(buffer).o)
@@ -30,6 +32,7 @@ test: $(NAME) $(objects_test)
 	$(CC) $(CFLAGS) -Itest $(objects_test) $(NAME) -o tester
 	@echo "launching tester..."
 	@./tester
+	@valgrind --leak-check=full ./tester
 	@echo "removing tester.."
 	@rm -rf tester .buffer
 

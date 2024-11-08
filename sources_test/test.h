@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/08 13:25:51 by abareux           #+#    #+#             */
+/*   Updated: 2024/11/08 14:12:00 by abareux          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef TEST_H
 # define TEST_H
 
@@ -11,5 +23,11 @@ int		test_putchar(void);
 int		test_putstr(void);
 int		test_strlen(void);
 int		test_strcmp(void);
+int     test_strdup(void);
+
+int		test_converter(void);
+
+int		test_calloc(void);
+int		test_memset(void);
 
 #endif

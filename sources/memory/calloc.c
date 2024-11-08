@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   calloc.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 18:13:07 by abareux           #+#    #+#             */
-/*   Updated: 2024/11/08 14:12:16 by abareux          ###   ########.fr       */
+/*   Created: 2024/11/08 13:47:21 by abareux           #+#    #+#             */
+/*   Updated: 2024/11/08 14:29:56 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include <cookie_memory.h>
 
-int	main(void)
+void    *cookie_calloc(size_t size, size_t number_of_element)
 {
-	if (test_putchar())
-		return (1);
-	if (test_putstr())
-		return (1);
-	if (test_strlen())
-		return (1);
-    if (test_strcmp())
-		return (1);
-	if (test_strdup())
-		return (1);
-	if (test_converter())
-		return (1);
-
-	if (test_calloc())
-		return (1);
-	return (0);
+    if (size * number_of_element / number_of_element != size)
+        return (NULL);
+    return (cookie_memset(malloc(size * number_of_element), size * number_of_element, 0));
 }

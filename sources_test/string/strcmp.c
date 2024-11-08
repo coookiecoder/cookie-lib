@@ -17,17 +17,17 @@
 int test_strcmp(void)
 {
 	print_test("strcmp : ");
-	if (cookie_strcmp("strcmp", "strcmp") != false)
+	if (cookie_strcmp("strcmp", "strcmp") != COOKIE_STRCMP_EQUAL)
 		return (print_error());
-	if (cookie_strcmp("strcmp", "strcmo") != true)
+	if (cookie_strcmp("strcmp", "strcmo") != COOKIE_STRCMP_NOT_EQUAL)
 		return (print_error());
 	print_succes();
 	print_test("strcmp n : ");
-	if (cookie_strcmp_n("strcmp", "strcmp", 6) != false)
+	if (cookie_strcmp_n("strcmp", "strcmp", 6) != COOKIE_STRCMP_EQUAL)
 		return (print_error());
-	if (cookie_strcmp_n("strcmp", "strcmo", 5) != false)
+	if (cookie_strcmp_n("strcmp", "strcmo", 5) != COOKIE_STRCMP_EQUAL)
 		return (print_error());
-	if (cookie_strcmp_n("strcmp", "strcmo", 6) != true)
+	if (cookie_strcmp_n("strcmp", "strcmo", 6) != COOKIE_STRCMP_NOT_EQUAL)
 		return (print_error());
 	print_succes();
 	return (0);
