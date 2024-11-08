@@ -28,6 +28,7 @@ int     test_strdup(void);
 int		test_converter(void);
 
 int		test_calloc(void);
+int		test_memchr(void);
 int		test_memset(void);
 
 #endif

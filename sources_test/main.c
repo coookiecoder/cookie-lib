@@ -29,5 +29,7 @@ int	main(void)
 
 	if (test_calloc())
 		return (1);
+	if (test_memchr())
+		return (1);
 	return (0);
 }

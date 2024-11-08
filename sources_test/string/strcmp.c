@@ -22,7 +22,7 @@ int test_strcmp(void)
 	if (cookie_strcmp("strcmp", "strcmo") != COOKIE_STRCMP_NOT_EQUAL)
 		return (print_error());
 	print_succes();
-	print_test("strcmp n : ");
+	print_test("strcmp_n : ");
 	if (cookie_strcmp_n("strcmp", "strcmp", 6) != COOKIE_STRCMP_EQUAL)
 		return (print_error());
 	if (cookie_strcmp_n("strcmp", "strcmo", 5) != COOKIE_STRCMP_EQUAL)

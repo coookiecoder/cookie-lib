@@ -1,6 +1,6 @@
 files = string/putstr string/putchar string/strcmp string/strlen \
 		cookie_string/strdup cookie_string/converter \
-		memory/calloc memory/memset
+		memory/calloc memory/memchr memory/memcmp memory/memset
 
 sources = $(foreach buffer, $(files), sources/$(buffer).c)
 objects = $(foreach buffer, $(files), objects/$(buffer).o)
