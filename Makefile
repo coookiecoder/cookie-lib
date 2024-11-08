@@ -14,16 +14,7 @@ CFLAGS_TEST = -Werror -Wextra -Wall -Iinclude -Isources_test -g3
 
 NAME = cookie_lib.a
 
-test: $(NAME) $(objects_test)
-	@rm -rf .buffer
-	@echo "compiling tester..."
-	$(CC) $(CFLAGS) -Itest $(objects_test) $(NAME) -o tester
-	@echo "launching tester..."
-	@./tester
-	@echo "removing tester.."
-	@rm -rf tester .buffer
-
-all: $(NAME)
+all: test
 
 objects/%.o: sources/%.c
 	mkdir -p $(dir $@)
@@ -32,6 +23,15 @@ objects/%.o: sources/%.c
 objects_test/%.o: sources_test/%.c
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS_TEST) -o $@ -c $<
+
+test: $(NAME) $(objects_test)
+	@rm -rf .buffer
+	@echo "compiling tester..."
+	$(CC) $(CFLAGS) -Itest $(objects_test) $(NAME) -o tester
+	@echo "launching tester..."
+	@./tester
+	@echo "removing tester.."
+	@rm -rf tester .buffer
 
 $(NAME): $(objects)
 	ar rcs $(NAME) $(objects)
