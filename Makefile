@@ -38,7 +38,7 @@ test: $(NAME) $(objects_test)
 
 $(NAME): $(objects)
 	ar rcs $(NAME) $(objects)
-	@echo "coookie lib done"
+	@echo "cookie lib done"
 
 clean:
 	rm -rf objects objects_test
