@@ -36,6 +36,15 @@ test: $(NAME) $(objects_test)
 	@echo "removing tester.."
 	@rm -rf tester .buffer
 
+test_fast: $(NAME) $(objects_test)
+	@rm -rf .buffer
+	@echo "compiling tester..."
+	$(CC) $(CFLAGS) -Itest $(objects_test) $(NAME) -o tester
+	@echo "launching tester..."
+	@./tester
+	@echo "removing tester.."
+	@rm -rf tester .buffer
+
 $(NAME): $(objects)
 	ar rcs $(NAME) $(objects)
 	@echo "cookie lib done"
