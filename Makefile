@@ -1,5 +1,5 @@
 files = string/putstr string/putchar string/strcmp string/strlen string/strdup \
-		cookie_string/strdup cookie_string/converter \
+		cookie_string/converter cookie_string/strcmp cookie_string/strlen cookie_string/strdup \
 		memory/calloc memory/memchr memory/memcmp memory/memset
 
 sources = $(foreach buffer, $(files), sources/$(buffer).c)
