@@ -21,8 +21,8 @@ objects_test/%.o: sources_test/%.c
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS_TEST) -o $@ -c $<
 
-test: $(NAME)
-
+cookie_lib.so: $(NAME)
+	$(CC) -shared -o cookie_lib.so $(NAME)
 
 $(NAME): $(objects)
 	ar rcs $(NAME) $(objects)
