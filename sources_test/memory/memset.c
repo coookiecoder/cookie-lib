@@ -11,5 +11,21 @@
 /* ************************************************************************** */
 
 #include <cookie_memory.h>
+#include <test.h>
 
-int	test_memset(void);
+int	test_memset(void)
+{
+	char	buffer[10];
+	int		index;
+
+	cookie_mem_set(buffer, sizeof(char) * 10, 'a');
+	index = 0;
+	print_test("mem_set : ");
+	while (index < 10)
+	{
+		if (buffer[index++] != 'a')
+			return (print_error());
+	}
+	print_succes();
+	return (0);
+}

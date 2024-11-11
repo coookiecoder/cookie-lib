@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cookie_string.h>
 #include "test.h"
 
 int	main(void)
 {
+	cookie_put_str("\ntesting string sub module\n\n");
 	if (test_putchar())
 		return (1);
 	if (test_putstr())
@@ -26,11 +28,14 @@ int	main(void)
 		return (1);
 	if (test_converter())
 		return (1);
+	cookie_put_str("\ntesting memory sub module\n\n");
 	if (test_calloc())
 		return (1);
 	if (test_memchr())
 		return (1);
 	if (test_memcmp())
+		return (1);
+	if (test_memset())
 		return (1);
 	return (0);
 }
