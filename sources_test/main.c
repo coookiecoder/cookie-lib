@@ -6,7 +6,7 @@
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 18:13:07 by abareux           #+#    #+#             */
-/*   Updated: 2024/11/08 14:12:16 by abareux          ###   ########.fr       */
+/*   Updated: 2024/11/11 16:32:37 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 int	main(void)
 {
+	cookie_put_str("\ntesting cookie string sub module\n\n");
+	if (test_converter())
+		return (1);
+	if (test_cookie_strdup())
+		return (1);
+
 	cookie_put_str("\ntesting string sub module\n\n");
 	if (test_putchar())
 		return (1);
@@ -26,8 +32,7 @@ int	main(void)
 		return (1);
 	if (test_strdup())
 		return (1);
-	if (test_converter())
-		return (1);
+
 	cookie_put_str("\ntesting memory sub module\n\n");
 	if (test_calloc())
 		return (1);

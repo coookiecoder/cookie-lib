@@ -19,13 +19,14 @@ int		print_error(void);
 void	print_succes(void);
 void	print_test(const char *test_name);
 
+int		test_converter(void);
+int		test_cookie_strdup(void);
+
 int		test_putchar(void);
 int		test_putstr(void);
 int		test_strlen(void);
 int		test_strcmp(void);
 int		test_strdup(void);
-
-int		test_converter(void);
 
 int		test_calloc(void);
 int		test_memchr(void);

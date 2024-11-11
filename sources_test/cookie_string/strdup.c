@@ -13,12 +13,12 @@
 #include <cookie_string.h>
 #include <test.h>
 
-int	test_strdup(void)
+int	test_cookie_strdup(void)
 {
 	t_cookie_string	string = cookie_string_converter("hello world");
 	t_cookie_string	buffer = cookie_string_str_dup(string);
 
-	print_test("str_dup : ");
+	print_test("cookie_str_dup : ");
 	if (cookie_strcmp(string.string, buffer.string) != COOKIE_STRCMP_EQUAL)
 		return (free(string.string), free(buffer.string), print_error());
 	if (string.len != buffer.len)
