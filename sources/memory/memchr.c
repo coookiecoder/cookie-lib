@@ -6,12 +6,11 @@
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:45:32 by abareux           #+#    #+#             */
-/*   Updated: 2024/11/08 17:14:23 by abareux          ###   ########.fr       */
+/*   Updated: 2024/11/11 16:37:54 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cookie_memory.h>
-#include <cookie_bool.h>
 
 static
 bool	check_sub_memory(void *mem, const t_cookie_memory_size size_addr_1, void *sub_mem, const t_cookie_memory_size size_addr_2, t_cookie_memory_size start)

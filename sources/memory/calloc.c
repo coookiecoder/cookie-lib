@@ -12,7 +12,7 @@
 
 #include <cookie_memory.h>
 
-void	*cookie_calloc(size_t size, size_t number_of_element)
+void	*cookie_calloc(const size_t size, const size_t number_of_element)
 {
 	if (size * number_of_element / number_of_element != size)
 		return (NULL);

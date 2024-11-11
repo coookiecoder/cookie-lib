@@ -12,7 +12,7 @@
 
 #include <cookie_memory.h>
 
-void	*cookie_mem_set(void *data, size_t size, char byte)
+void	*cookie_mem_set(void *data, const size_t size, const char byte)
 {
 	size_t	index;
 

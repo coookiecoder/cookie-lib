@@ -15,8 +15,8 @@
 
 int	test_cookie_strdup(void)
 {
-	t_cookie_string	string = cookie_string_converter("hello world");
-	t_cookie_string	buffer = cookie_string_str_dup(string);
+	const t_cookie_string	string = cookie_string_converter("hello world");
+	const t_cookie_string	buffer = cookie_string_str_dup(string);
 
 	print_test("cookie_str_dup : ");
 	if (cookie_strcmp(string.string, buffer.string) != COOKIE_STRCMP_EQUAL)

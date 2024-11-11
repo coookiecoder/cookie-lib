@@ -15,7 +15,7 @@
 
 int	test_converter(void)
 {
-	t_cookie_string	string = cookie_string_converter("hello world");
+	const t_cookie_string	string = cookie_string_converter("hello world");
 
 	print_test("converter : ");
 	if (cookie_strcmp(string.string, "hello world") != COOKIE_STRCMP_EQUAL)

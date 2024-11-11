@@ -14,22 +14,22 @@
 #include <test.h>
 
 static
-void	print_to_buffer(int buffer, int fd)
+void	print_to_buffer(const int buffer, const int fd)
 {
 	dup2(buffer, fd);
 }
 
 static
-void	print_to_std_out(int backup, int fd)
+void	print_to_std_out(const int backup, const int fd)
 {
 	dup2(backup, fd);
 }
 
 int	test_putstr(void)
 {
-	int	backup_out = dup(1);
-	int	backup_err = dup(2);
-	int	buffer = open(".buffer", O_WRONLY | O_CREAT, 0666);
+	const int	backup_out = dup(1);
+	const int	backup_err = dup(2);
+	const int	buffer = open(".buffer", O_WRONLY | O_CREAT, 0666);
 
 	if (buffer == -1 || backup_out == -1 || backup_err == -1)
 		return (print_error());
