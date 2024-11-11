@@ -4,34 +4,37 @@ files = string/putstr string/putchar string/strcmp string/strlen string/strdup \
 
 sources = $(foreach buffer, $(files), sources/$(buffer).c)
 objects = $(foreach buffer, $(files), objects/$(buffer).o)
+objects_shared = $(foreach buffer, $(files), objects_shared/$(buffer).o)
 
 CC = cc
 CFLAGS = -Werror -Wextra -Wall -Iinclude -g3
 CFLAGS_TEST = -Werror -Wextra -Wall -Iinclude -Isources_test -g3
 
 NAME = cookie_lib.a
+NAME_SHARED = libcookie_lib.so
 
-all: test
+all: $(NAME) $(NAME_SHARED)
 
 objects/%.o: sources/%.c
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-objects_test/%.o: sources_test/%.c
+objects_shared/%.o: sources/%.c
 	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS_TEST) -o $@ -c $<
-
-cookie_lib.so: $(NAME)
-	$(CC) -shared -o cookie_lib.so $(NAME)
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 $(NAME): $(objects)
 	ar rcs $(NAME) $(objects)
 	@echo "cookie lib done"
 
+$(NAME_SHARED): $(objects_shared)
+	$(CC) -shared -o $(NAME_SHARED) $(objects_shared)
+	@echo "Shared cookie lib done"
+
 clean:
-	rm -rf objects objects_test
+	rm -rf objects objects_shared
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) $(NAME_SHARED)
 
 re: fclean all
