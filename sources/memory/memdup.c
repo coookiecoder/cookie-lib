@@ -12,7 +12,7 @@
 
 #include <cookie_memory.h>
 
-void	*cookie_mem_dup(void *mem_src, const t_cookie_memory_size size)
+void	*cookie_mem_dup(const void* mem_src, const t_cookie_memory_size size)
 {
 	t_cookie_memory_size	index = 0;
 	unsigned char			*mem_dst = malloc(sizeof(unsigned char) * size);

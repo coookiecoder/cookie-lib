@@ -13,7 +13,7 @@
 #include <cookie_memory.h>
 
 static
-bool	check_sub_memory(void *mem, const t_cookie_memory_size size_addr_1, void *sub_mem, const t_cookie_memory_size size_addr_2, t_cookie_memory_size start)
+bool	check_sub_memory(const void* mem, const t_cookie_memory_size size_addr_1, const void* sub_mem, const t_cookie_memory_size size_addr_2, t_cookie_memory_size start)
 {
 	t_cookie_memory_size	index = 0;
 
@@ -27,7 +27,8 @@ bool	check_sub_memory(void *mem, const t_cookie_memory_size size_addr_1, void *s
 	return false;
 }
 
-void	*cookie_mem_chr(void *mem, const t_cookie_memory_size size_addr_1, void *sub_mem, const t_cookie_memory_size size_addr_2)
+const void* cookie_mem_chr(const void* mem, const t_cookie_memory_size size_addr_1, const void* sub_mem,
+                           const t_cookie_memory_size size_addr_2)
 {
 	t_cookie_memory_size	index = 0;
 

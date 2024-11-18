@@ -12,7 +12,7 @@
 
 #include <cookie_memory.h>
 
-bool	cookie_mem_cmp(void *mem1, void *mem2, const t_cookie_memory_size size)
+bool	cookie_mem_cmp(const void* mem1, const void* mem2, const t_cookie_memory_size size)
 {
 	t_cookie_memory_size	index = 0;
 

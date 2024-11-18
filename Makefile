@@ -1,4 +1,4 @@
-files = string/putstr string/putchar string/strcmp string/strlen string/strdup \
+files = string/putstr string/putchar string/strcmp string/strlen string/strdup string/strchr string/strmove string/strcopy \
 		cookie_string/converter cookie_string/strcmp cookie_string/strlen cookie_string/strdup \
 		memory/calloc memory/memchr memory/memcmp memory/memset memory/memmove memory/memdup memory/memcopy
 

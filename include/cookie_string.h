@@ -56,5 +56,8 @@ t_cookie_string_len	cookie_put_str_fd_nl(const char *string, int fd);
 t_cookie_string_len	cookie_put_char_fd(char c, int fd);
 t_cookie_string_len	cookie_put_char_fd_nl(char c, int fd);
 char				*cookie_str_dup(const char *string);
+char				*cookie_str_copy(const char *src, char *dst);
+char				*cookie_str_move(char *src, char *dst);
+bool				cookie_str_chr(const char *ref, const char *cmp);
 
 #endif
