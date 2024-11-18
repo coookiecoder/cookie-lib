@@ -12,7 +12,7 @@
 
 #include <cookie_memory.h>
 
-void	*cookie_mem_move(void* src_mem, void *dst_mem, const t_cookie_memory_size size)
+void	*cookie_mem_move(const void* src_mem, void *dst_mem, const t_cookie_memory_size size)
 {
 	t_cookie_memory_size	index = size;
 

@@ -26,7 +26,7 @@ const void* cookie_mem_chr(const void* mem, const t_cookie_memory_size size_addr
                            const t_cookie_memory_size size_addr_2);
 bool	cookie_mem_cmp(const void* mem1, const void* mem2, const t_cookie_memory_size size);
 void	*cookie_mem_set(void *data, size_t size, char byte);
-void	*cookie_mem_move(void* src_mem, void *dst_mem, const t_cookie_memory_size size);
+void	*cookie_mem_move(const void* src_mem, void *dst_mem, const t_cookie_memory_size size);
 void	*cookie_mem_copy(const void* src_mem, void *dst_mem, const t_cookie_memory_size size);
 void	*cookie_mem_dup(const void* mem_src, const t_cookie_memory_size size);
 

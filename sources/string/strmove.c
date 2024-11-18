@@ -13,7 +13,7 @@
 #include <cookie_memory.h>
 #include <cookie_string.h>
 
-char	*cookie_str_move(char *src, char *dst)
+char	*cookie_str_move(const char* src, char *dst)
 {
 	return cookie_mem_move(src, dst, cookie_str_len(src) + 1);
 }
