@@ -20,8 +20,8 @@ bool	cookie_mem_cmp(void *mem1, void *mem2, const t_cookie_memory_size size)
 	while (index < size)
 	{
 		if (*(unsigned char *)(mem1 + index) != *(unsigned char *)(mem2 + index))
-			return (COOKIE_MEMCMP_NOT_EQUAL);
+			return COOKIE_MEMCMP_NOT_EQUAL;
 		index++;
 	}
-	return (COOKIE_MEMCMP_EQUAL);
+	return COOKIE_MEMCMP_EQUAL;
 }

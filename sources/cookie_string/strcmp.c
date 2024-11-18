@@ -12,12 +12,12 @@
 
 #include <cookie_string.h>
 
-bool	cookie_string_strcmp(t_cookie_string ref, t_cookie_string cmp)
+bool	cookie_string_str_cmp(const t_cookie_string ref, const t_cookie_string cmp)
 {
-	return (cookie_strcmp(ref.string, cmp.string));
+	return cookie_str_cmp(ref.string, cmp.string);
 }
 
-bool	cookie_string_strcmp_n(t_cookie_string ref, t_cookie_string cmp, t_cookie_string_len n)
+bool	cookie_string_str_cmp_n(const t_cookie_string ref, const t_cookie_string cmp, const t_cookie_string_len n)
 {
-	return (cookie_strcmp_n(ref.string, cmp.string, n));
+	return cookie_str_cmp_n(ref.string, cmp.string, n);
 }

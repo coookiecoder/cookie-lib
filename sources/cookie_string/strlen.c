@@ -12,17 +12,17 @@
 
 #include <cookie_string.h>
 
-t_cookie_string_len	cookie_string_strlen(const t_cookie_string string)
+t_cookie_string_len	cookie_string_str_len(const t_cookie_string string)
 {
 	return string.len;
 }
 
-t_cookie_string_len	cookie_string_strlen_stop(const t_cookie_string string, const char stop)
+t_cookie_string_len	cookie_string_str_len_stop(const t_cookie_string string, const char stop)
 {
-	return (cookie_strlen_stop(string.string, stop));
+	return cookie_str_len_stop(string.string, stop);
 }
 
-t_cookie_string_len	cookie_string_r_strlen_stop(const t_cookie_string string, const char stop)
+t_cookie_string_len	cookie_string_r_str_len_stop(const t_cookie_string string, const char stop)
 {
-	return (cookie_r_strlen_stop(string.string, stop));
+	return cookie_r_str_len_stop(string.string, stop);
 }

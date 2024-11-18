@@ -17,9 +17,9 @@ void	*cookie_mem_set(void *data, const size_t size, const char byte)
 	size_t	index;
 
 	if (data == NULL)
-		return (data);
+		return data;
 	index = 0;
 	while (index < size)
 		*((char *)data + index++) = byte;
-	return (data);
+	return data;
 }

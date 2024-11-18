@@ -14,20 +14,20 @@
 
 t_cookie_string_len	cookie_put_str(const char *string)
 {
-	return (write(1, string, cookie_strlen(string)));
+	return write(1, string, cookie_str_len(string));
 }
 
 t_cookie_string_len	cookie_put_str_nl(const char *string)
 {
-	return (write(1, string, cookie_strlen(string)) + write(1, "\n", 1));
+	return write(1, string, cookie_str_len(string)) + write(1, "\n", 1);
 }
 
 t_cookie_string_len	cookie_put_str_fd(const char *string, const int fd)
 {
-	return (write(fd, string, cookie_strlen(string)));
+	return write(fd, string, cookie_str_len(string));
 }
 
 t_cookie_string_len	cookie_put_str_fd_nl(const char *string, const int fd)
 {
-	return (write(fd, string, cookie_strlen(string)) + write(fd, "\n", 1));
+	return write(fd, string, cookie_str_len(string)) + write(fd, "\n", 1);
 }

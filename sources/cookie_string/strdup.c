@@ -21,7 +21,7 @@ t_cookie_string	cookie_string_str_dup(const t_cookie_string string)
 	if (new_string.string == NULL)
 	{
 		new_string.len = 0;
-		return (new_string);
+		return new_string;
 	}
 	new_string.len = 0;
 	while (new_string.len < string.len)
@@ -29,5 +29,5 @@ t_cookie_string	cookie_string_str_dup(const t_cookie_string string)
 		new_string.string[new_string.len] = string.string[new_string.len];
 		new_string.len++;
 	}
-	return (new_string);
+	return new_string;
 }

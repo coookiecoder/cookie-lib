@@ -34,19 +34,19 @@ typedef struct s_cookie_string
 
 t_cookie_string		cookie_string_converter(const char *string);
 t_cookie_string		cookie_string_str_dup(const t_cookie_string string);
-t_cookie_string_len	cookie_string_strlen(const t_cookie_string string);
-t_cookie_string_len	cookie_string_strlen_stop(const t_cookie_string string, const char stop);
-t_cookie_string_len	cookie_string_r_strlen_stop(const t_cookie_string string, const char stop);
-bool				cookie_string_strcmp(const t_cookie_string ref, const t_cookie_string cmp);
-bool				cookie_string_strcmp_n(const t_cookie_string ref, const t_cookie_string cmp, t_cookie_string_len n);
+t_cookie_string_len	cookie_string_str_len(const t_cookie_string string);
+t_cookie_string_len	cookie_string_str_len_stop(const t_cookie_string string, const char stop);
+t_cookie_string_len	cookie_string_r_str_len_stop(const t_cookie_string string, const char stop);
+bool				cookie_string_str_cmp(const t_cookie_string ref, const t_cookie_string cmp);
+bool				cookie_string_str_cmp_n(const t_cookie_string ref, const t_cookie_string cmp, t_cookie_string_len n);
 
 // string
 
-t_cookie_string_len	cookie_strlen(const char *string);
-t_cookie_string_len	cookie_strlen_stop(const char *string, const char stop);
-t_cookie_string_len	cookie_r_strlen_stop(const char *string, const char stop);
-bool				cookie_strcmp(const char *ref, const char *cmp);
-bool				cookie_strcmp_n(const char *ref, const char *cmp, t_cookie_string_len n);
+t_cookie_string_len	cookie_str_len(const char *string);
+t_cookie_string_len	cookie_str_len_stop(const char *string, const char stop);
+t_cookie_string_len	cookie_r_str_len_stop(const char *string, const char stop);
+bool				cookie_str_cmp(const char *ref, const char *cmp);
+bool				cookie_str_cmp_n(const char *ref, const char *cmp, t_cookie_string_len n);
 t_cookie_string_len	cookie_put_str(const char *string);
 t_cookie_string_len	cookie_put_str_nl(const char *string);
 t_cookie_string_len	cookie_put_char(char c);

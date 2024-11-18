@@ -18,12 +18,12 @@ t_cookie_string	cookie_string_converter(const char *string)
 	t_cookie_string		new_string;
 	t_cookie_string_len	len;
 
-	len = cookie_strlen(string);
+	len = cookie_str_len(string);
 	new_string.string = cookie_calloc(sizeof(char), len + 1);
 	if (new_string.string == NULL)
 	{
 		new_string.len = 0;
-		return (new_string);
+		return new_string;
 	}
 	new_string.len = 0;
 	while (new_string.len < len)
@@ -31,5 +31,5 @@ t_cookie_string	cookie_string_converter(const char *string)
 		new_string.string[new_string.len] = string[new_string.len];
 		new_string.len++;
 	}
-	return (new_string);
+	return new_string;
 }

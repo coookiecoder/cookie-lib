@@ -15,6 +15,6 @@
 void	*cookie_calloc(const size_t size, const size_t number_of_element)
 {
 	if (size * number_of_element / number_of_element != size)
-		return (NULL);
-	return (cookie_mem_set(malloc(size * number_of_element), size * number_of_element, 0));
+		return NULL;
+	return cookie_mem_set(malloc(size * number_of_element), size * number_of_element, 0);
 }

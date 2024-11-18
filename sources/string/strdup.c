@@ -18,15 +18,15 @@ char	*cookie_str_dup(const char *string)
 	char				*new_string;
 	t_cookie_string_len	len;
 
-	len = cookie_strlen(string);
+	len = cookie_str_len(string);
 	new_string = cookie_calloc(sizeof(char), len-- + 1);
 	if (new_string == NULL)
-		return (new_string);
+		return new_string;
 	while (len)
 	{
 		new_string[len] = string[len];
 		len--;
 	}
 	new_string[0] = string[0];
-	return (new_string);
+	return new_string;
 }
