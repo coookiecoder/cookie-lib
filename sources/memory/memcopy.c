@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   memcopy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 13:53:19 by abareux           #+#    #+#             */
-/*   Updated: 2024/11/08 13:58:31 by abareux          ###   ########.fr       */
+/*   Created: 2024/11/18 17:06:19 by abareux           #+#    #+#             */
+/*   Updated: 2024/11/18 17:06:40 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cookie_memory.h>
 
-void	*cookie_mem_set(void *data, const size_t size, const char byte)
+void	*cookie_mem_copy(void* src_mem, void *dst_mem, const t_cookie_memory_size size)
 {
-	size_t	index = 0;
+	t_cookie_memory_size	index = 0;
 
-	if (data == NULL)
-		return data;
-	while (index < size)
-		*((char *)data + index++) = byte;
-	return data;
+	while(index < size)
+	{
+		*((unsigned char *)dst_mem + index) = *((unsigned char *)src_mem + index);
+		index++;
+	}
+	return dst_mem;
 }

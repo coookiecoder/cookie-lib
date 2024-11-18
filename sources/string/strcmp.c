@@ -22,9 +22,8 @@ bool	cookie_str_cmp(const char *ref, const char *cmp)
 
 bool	cookie_str_cmp_n(const char *ref, const char *cmp, const t_cookie_string_len n)
 {
-	const char	*start;
+	const char	*start = ref;
 
-	start = ref;
 	while (*ref && *cmp && (t_cookie_string_len)(ref - start) < n)
 		if (*ref++ != *cmp++)
 			return COOKIE_STRCMP_NOT_EQUAL;

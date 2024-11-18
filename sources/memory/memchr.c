@@ -15,9 +15,8 @@
 static
 bool	check_sub_memory(void *mem, const t_cookie_memory_size size_addr_1, void *sub_mem, const t_cookie_memory_size size_addr_2, t_cookie_memory_size start)
 {
-	t_cookie_memory_size	index;
+	t_cookie_memory_size	index = 0;
 
-	index = 0;
 	while (start < size_addr_1 && index < size_addr_2)
 	{
 		if (*((unsigned char *)mem + start++) != *((unsigned char *)sub_mem + index++))
@@ -30,9 +29,8 @@ bool	check_sub_memory(void *mem, const t_cookie_memory_size size_addr_1, void *s
 
 void	*cookie_mem_chr(void *mem, const t_cookie_memory_size size_addr_1, void *sub_mem, const t_cookie_memory_size size_addr_2)
 {
-	t_cookie_memory_size	index;
+	t_cookie_memory_size	index = 0;
 
-	index = 0;
 	while (index < size_addr_1)
 	{
 		if (*((unsigned char *) mem + index) == *(unsigned char *)sub_mem)

@@ -15,11 +15,9 @@
 
 char	*cookie_str_dup(const char *string)
 {
-	char				*new_string;
-	t_cookie_string_len	len;
+	t_cookie_string_len	len = cookie_str_len(string);
+	char				*new_string = cookie_calloc(sizeof(char), len-- + 1);
 
-	len = cookie_str_len(string);
-	new_string = cookie_calloc(sizeof(char), len-- + 1);
 	if (new_string == NULL)
 		return new_string;
 	while (len)

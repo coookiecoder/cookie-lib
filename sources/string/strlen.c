@@ -14,9 +14,8 @@
 
 t_cookie_string_len	cookie_str_len(const char *string)
 {
-	const char	*end;
+	const char	*end = string;
 
-	end = string;
 	while (*end)
 		end++;
 	return end - string;
@@ -24,9 +23,8 @@ t_cookie_string_len	cookie_str_len(const char *string)
 
 t_cookie_string_len	cookie_str_len_stop(const char *string, const char stop)
 {
-	const char	*end;
+	const char	*end = string;
 
-	end = string;
 	while (*end && *end != stop)
 		end++;
 	return end - string;
@@ -34,9 +32,8 @@ t_cookie_string_len	cookie_str_len_stop(const char *string, const char stop)
 
 t_cookie_string_len	cookie_r_str_len_stop(const char *string, const char stop)
 {
-	const char	*end;
+	const char	*end = string;
 
-	end = string;
 	while (*end)
 		end++;
 	while (end != string && *end != stop)

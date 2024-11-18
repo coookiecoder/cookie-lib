@@ -15,10 +15,9 @@
 
 t_cookie_string	cookie_string_converter(const char *string)
 {
-	t_cookie_string		new_string;
-	t_cookie_string_len	len;
+	t_cookie_string				new_string;
+	const t_cookie_string_len	len = cookie_str_len(string);
 
-	len = cookie_str_len(string);
 	new_string.string = cookie_calloc(sizeof(char), len + 1);
 	if (new_string.string == NULL)
 	{
