@@ -27,8 +27,7 @@ bool	check_sub_memory(const void* mem, const t_cookie_memory_size size_addr_1, c
 	return false;
 }
 
-const void* cookie_mem_chr(const void* mem, const t_cookie_memory_size size_addr_1, const void* sub_mem,
-                           const t_cookie_memory_size size_addr_2)
+const void* cookie_mem_chr(const void* mem, const t_cookie_memory_size size_addr_1, const void* sub_mem, const t_cookie_memory_size size_addr_2)
 {
 	t_cookie_memory_size	index = 0;
 
@@ -43,3 +42,20 @@ const void* cookie_mem_chr(const void* mem, const t_cookie_memory_size size_addr
 	}
 	return NULL;
 }
+
+const void* cookie_mem_r_chr(const void* mem, const t_cookie_memory_size size_addr_1, const void* sub_mem, const t_cookie_memory_size size_addr_2)
+{
+	t_cookie_memory_size	index = size_addr_1;
+
+	while (index > 0)
+	{
+		if (*((unsigned char *) mem + index) == *(unsigned char *)sub_mem)
+		{
+			if (check_sub_memory(mem, size_addr_1, sub_mem, size_addr_2, index))
+				return mem + index;
+		}
+		index--;
+	}
+	return NULL;
+}
+

@@ -17,6 +17,8 @@
 # include <fcntl.h>
 # include <stdlib.h>
 
+#include <string.h>
+
 # include <cookie_bool.h>
 
 # define COOKIE_STRCMP_EQUAL 0
@@ -44,7 +46,10 @@ bool				cookie_string_str_cmp_n(t_cookie_string ref, t_cookie_string cmp, t_cook
 
 t_cookie_string_len	cookie_str_len(const char *string);
 t_cookie_string_len	cookie_str_len_stop(const char *string, char stop);
-t_cookie_string_len	cookie_r_str_len_stop(const char *string, char stop);
+t_cookie_string_len	cookie_str_r_len_stop(const char *string, char stop);
+t_cookie_string_len	cookie_str_len_n(const char *string, t_cookie_string_len max_len);
+t_cookie_string_len	cookie_str_len_stop_n(const char *string, char stop, t_cookie_string_len max_len);
+t_cookie_string_len	cookie_str_r_len_stop_n(const char *string, char stop, t_cookie_string_len max_len);
 bool				cookie_str_cmp(const char *ref, const char *cmp);
 bool				cookie_str_cmp_n(const char *ref, const char *cmp, t_cookie_string_len n);
 t_cookie_string_len	cookie_put_str(const char *string);
@@ -56,8 +61,17 @@ t_cookie_string_len	cookie_put_str_fd_nl(const char *string, int fd);
 t_cookie_string_len	cookie_put_char_fd(char c, int fd);
 t_cookie_string_len	cookie_put_char_fd_nl(char c, int fd);
 char				*cookie_str_dup(const char *string);
+char				*cookie_str_dup_n(const char *string, t_cookie_string_len n);
 char				*cookie_str_copy(const char *src, char *dst);
+char				*cookie_str_copy_n(const char *src, char *dst, t_cookie_string_len n);
 char				*cookie_str_move(const char* src, char *dst);
 bool				cookie_str_chr(const char *ref, const char *cmp);
+bool				cookie_str_r_chr(const char *ref, const char *cmp);
+char				*cookie_str_cat(char *dst, const char *src);
+char				*cookie_str_cat_n(char *dst, const char *src, t_cookie_string_len n);
+t_cookie_string_len	cookie_str_c_spn(const char *string, const char *reject);
+t_cookie_string_len cookie_str_spn(const char *string, const char *accept);
+char				*cookie_str_p_brk(const char *string, const char *accept);
+char				*cookie_str_str(const char *haystack, const char *needle);
 
 #endif

@@ -16,15 +16,28 @@
 char	*cookie_str_dup(const char *string)
 {
 	t_cookie_string_len	len = cookie_str_len(string);
-	char				*new_string = cookie_calloc(sizeof(char), len-- + 1);
+	char				*new_string = calloc(sizeof(char), len-- + 1);
 
 	if (new_string == NULL)
 		return new_string;
-	while (len)
-	{
-		new_string[len] = string[len];
-		len--;
-	}
-	new_string[0] = string[0];
+
+	return cookie_mem_copy(new_string, new_string, len + 1);
+}
+
+char	*cookie_str_dup_n(const char *string, t_cookie_string_len n) {
+	t_cookie_string_len	len = cookie_str_len(string);
+
+	if (len > n)
+		len = n;
+
+	char				*new_string = calloc(sizeof(char), len-- + 1);
+
+	if (new_string == NULL)
+		return new_string;
+
+	cookie_mem_copy(new_string, new_string, len + 1);
+
+	new_string[len] = '\0';
+
 	return new_string;
 }

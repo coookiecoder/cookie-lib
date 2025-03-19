@@ -15,6 +15,10 @@ add_library(cookie_lib_string
         sources/string/strmove.c
         sources/string/strcopy.c
         sources/string/strjoin.c
+        sources/string/strcat.c
+        sources/string/strcspn.c
+        sources/string/strpbrk.c
+        sources/string/strstr.c
 )
 
 add_library(cookie_lib_cookie_string

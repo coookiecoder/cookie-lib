@@ -17,3 +17,11 @@ char	*cookie_str_copy(const char *src, char *dst)
 {
 	return cookie_mem_copy(src, dst, cookie_str_len(src) + 1);
 }
+
+char	*cookie_str_copy_n(const char *src, char *dst, t_cookie_string_len n)
+{
+	if (cookie_str_len(src) + 1 > n)
+		return cookie_mem_copy(src, dst, n);
+	return cookie_mem_copy(src, dst, cookie_str_len(src) + 1);
+}
+

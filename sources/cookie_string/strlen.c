@@ -24,5 +24,5 @@ t_cookie_string_len	cookie_string_str_len_stop(const t_cookie_string string, con
 
 t_cookie_string_len	cookie_string_r_str_len_stop(const t_cookie_string string, const char stop)
 {
-	return cookie_r_str_len_stop(string.string, stop);
+	return cookie_str_r_len_stop(string.string, stop);
 }

@@ -30,6 +30,7 @@ void		cookie_exit(int code);
 
 void		*cookie_calloc(size_t size, size_t number_of_element);
 const void	*cookie_mem_chr(const void* mem, t_cookie_memory_size size_addr_1, const void* sub_mem, t_cookie_memory_size size_addr_2);
+const void	*cookie_mem_r_chr(const void* mem, const t_cookie_memory_size size_addr_1, const void* sub_mem, const t_cookie_memory_size size_addr_2);
 bool		cookie_mem_cmp(const void* mem1, const void* mem2, t_cookie_memory_size size);
 void		*cookie_mem_set(void *data, size_t size, char byte);
 void		*cookie_mem_move(const void* src_mem, void *dst_mem, t_cookie_memory_size size);

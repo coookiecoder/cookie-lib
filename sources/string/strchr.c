@@ -12,7 +12,10 @@
 
 #include <cookie_memory.h>
 
-bool	cookie_str_chr(const char *ref, const char *cmp)
-{
+bool	cookie_str_chr(const char *ref, const char *cmp) {
 	return cookie_mem_chr(ref, cookie_str_len(ref) + 1, cmp, cookie_str_len(cmp) + 1);
+}
+
+bool	cookie_str_r_chr(const char *ref, const char *cmp) {
+	return cookie_mem_r_chr(ref, cookie_str_len(ref) + 1, cmp, cookie_str_len(cmp) + 1);
 }
