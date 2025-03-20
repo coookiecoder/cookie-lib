@@ -41,5 +41,11 @@ add_library(cookie_lib_memory
         sources/memory/free.c
 )
 
+add_library(cookie_lib STATIC 
+		$<TARGET_OBJECTS:cookie_lib_string>
+		$<TARGET_OBJECTS:cookie_lib_cookie_string>
+		$<TARGET_OBJECTS:cookie_lib_memory>
+)
+
 set(CMAKE_CXX_STANDARD 23)
 

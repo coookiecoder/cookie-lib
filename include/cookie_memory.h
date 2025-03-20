@@ -6,7 +6,7 @@
 /*   By: abareux <abareux@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:48:27 by abareux           #+#    #+#             */
-/*   Updated: 2024/11/08 18:00:49 by abareux          ###   ########.fr       */
+/*   Updated: 2025/03/20 10:57:15 by abareux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 
 typedef unsigned long long int	t_cookie_memory_size;
 
-void		*cookie_malloc(t_cookie_memory_size size);
+void		*cookie_malloc(t_cookie_memory_size size, char *file, int line, const char *function);
 void		cookie_free(const void *memory);
 void		cookie_exit(int code);
 
-# define malloc(x) cookie_malloc(x)
+# define malloc(x) cookie_malloc(x, __FILE__, __LINE__, __FUNCTION__)
 # define free(x) cookie_free(x)
 # define exit(x) cookie_exit(x)
 
